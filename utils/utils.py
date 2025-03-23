@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 from psycopg2._psycopg import connection
 
+
 load_dotenv()
 
 def get_connection_to_postgres() -> connection:
