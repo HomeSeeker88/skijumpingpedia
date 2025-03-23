@@ -3,7 +3,7 @@ import logging
 from utils.utils import get_connection_to_postgres
 
 
-def create_tables():
+def create_tables() -> None:
 
     commands = (
         """
