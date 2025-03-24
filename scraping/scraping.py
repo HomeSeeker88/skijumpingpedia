@@ -7,9 +7,10 @@ def read_homologations() -> ResultSet:
     soup = BeautifulSoup(r.content, "html.parser")
     soup.prettify()
     s = soup.find_all('div', class_ = "table-row pointer reset-padding")
+    print(soup.get_text())
+    
     return s
 
 
 if __name__ =="__main__":
     content = read_homologations()
-    print(content)
