@@ -4,7 +4,6 @@ from utils.utils import get_connection_to_postgres
 
 
 def create_tables() -> None:
-
     commands = (
         """
         CREATE TABLE IF NOT EXISTS public.JUMPER (
@@ -48,7 +47,7 @@ def create_tables() -> None:
         CONSTRAINT fk_jumper_id FOREIGN KEY(JUMPER_ID) REFERENCES public.JUMPER(JUMPER_ID),
         CONSTRAINT fk_event_id FOREIGN KEY(EVENT_ID) REFERENCES public.EVENT(EVENT_ID),
         CONSTRAINT fk_hill_id FOREIGN KEY(HILL_ID) REFERENCES public.HILL(HILL_ID))
-        """
+        """,
     )
 
     try:
@@ -63,6 +62,7 @@ def create_tables() -> None:
     finally:
         if conn:
             conn.close()
+
 
 if __name__ == "__main__":
     create_tables()
