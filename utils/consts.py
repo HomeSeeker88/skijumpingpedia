@@ -1,0 +1,1 @@
+HOMOLOGATIONS = "https://www.fis-ski.com/DB/ski-jumping/homologations.html"
